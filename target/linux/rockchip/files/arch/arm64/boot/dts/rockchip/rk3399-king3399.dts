@@ -291,14 +291,11 @@
 	};
 
 	fan0: gpio-fan { // verify // vcc5v0_sys//散热风扇
-		//add by zhang
-                status = "disabled";
-                //add end
 		#cooling-cells = <2>;
 		compatible = "gpio-fan";
 		gpio-fan,speed-map = <0 0 3000 1>;
 		gpios = <&gpio1 RK_PC2 GPIO_ACTIVE_HIGH>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	gpio-restart {
