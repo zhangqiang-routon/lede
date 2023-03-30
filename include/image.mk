@@ -163,7 +163,9 @@ define Image/pad-to
 	dd if=$(1) of=$(1).new bs=$(2) conv=sync
 	mv $(1).new $(1)
 endef
-
+#add by zhang
+CONFIG_TARGET_ROOTFS_PARTSIZE = 320
+#add end
 ROOTFS_PARTSIZE=$(shell echo $$(($(CONFIG_TARGET_ROOTFS_PARTSIZE)*1024*1024)))
 
 define Image/pad-root-squashfs
